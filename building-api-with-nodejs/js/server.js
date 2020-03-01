@@ -6,9 +6,9 @@ var request = require('request');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + "/js/"));
 
 app.post('/signup', function(req, res) {  
-
   var options = {
     'method': 'POST',
     'url': 'http://localhost:3001/users',
@@ -53,12 +53,14 @@ app.post('/signup', function(req, res) {
       return res.sendStatus(500);
     }
     console.log(response.body);
+    // res.send(req.body);
   });
-
-  res.send(req.body);
+   res.send("<div style='display: flex;flex-direction: column;color: rgba(0,0,0,.7);'><h1 style='text-align: center;padding-top: 200px;margin-bottom: -20px;'>"+
+   "Успешная регистрация!</h1></br><a style='text-align: center;text-decoration: none;outline: none;color: rgba(0,0,0,.7);' "+
+   " href='http://10.64.2.197:53270/ecplibjsf/'><h2>Перейти на сайт ИС - ЭЦБ</h2></a></div>");
+  
 })
 
-app.use(express.static(__dirname + "/js/signup.html"));
 app.use("/", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
 })
