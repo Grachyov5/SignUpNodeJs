@@ -6,7 +6,7 @@ var request = require('request');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname + "/js/"));
+app.use(express.static(__dirname + "/.."));
 
 app.post('/signup', function(req, res) {  
   var options = {
@@ -47,8 +47,10 @@ app.post('/signup', function(req, res) {
       }
     })
   };
+  var err = "";
   request(options, function (error, response) { 
     // if (error) throw new Error(error);
+    err = error;
     if (error) {
       console.log(error);
       return res.sendStatus(500);
@@ -56,6 +58,10 @@ app.post('/signup', function(req, res) {
     console.log(response.body);
     // res.send(req.body);
   });
+  if (err) {
+    console.log(error);
+    return res.sendStatus(500);
+  }
    res.send("<div style='display: flex;flex-direction: column;color: rgba(0,0,0,.7);'><h1 style='text-align: center;padding-top: 200px;margin-bottom: -20px;'>"+
    "Успешная регистрация!</h1></br><a style='text-align: center;text-decoration: none;outline: none;color: rgba(0,0,0,.7);' "+
    " href='http://10.64.2.197:53270/ecplibjsf/'><h2>Перейти на сайт ИС - ЭЦБ</h2></a></div>");
