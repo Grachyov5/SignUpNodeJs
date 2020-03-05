@@ -25,23 +25,54 @@
                                     <h2 class="signup-header">Регистрация</h2>
                                     <div>
                                         <label class="label-style">Логин</label>
-                                        <input type="text" name="j_username" class="input-style pb1"/>
+                                        <input type="text" name="j_username" class="input-style pb1" required/>
                                     </div>
                                     <div>
                                         <label class="label-style">Пароль</label>
-                                        <input type="password" name="j_password" class="input-style pb1"/>
+                                        <input type="password" name="j_password" class="input-style pb1" required minlength="4"/>
                                     </div>
-                                    <div>
+                                    <!-- <div>
                                         <label class="label-style">Подтвердите пароль</label>
-                                        <input type="password" name="confirm_password" class="input-style pb1"/>
+                                        <input type="password" name="confirm_password" class="input-style pb1" required minlength="4"/>
+                                    </div> -->
+                                    <div>
+                                        <label class="label-style">Секретный вопрос</label>
+                                        <select name="secretQuestion" class="input-style" required>
+                                            <option value="" selected disabled hidden>Укажите Секретный вопрос</option>
+                                            <option value="Какое прозвище было у вас в детстве?">Какое прозвище было у вас в детстве?</option>
+                                            <option value="В каком городе вы познакомились со своей второй половиной?">В каком городе вы познакомились со своей второй половиной?</option>
+                                            <option value="Как звали вашего лучшего друга детства?">Как звали вашего лучшего друга детства?</option>
+                                            <option value="На какой улице вы жили в третьем классе?">На какой улице вы жили в третьем классе?</option>
+                                            <option value="Какой месяц и год рождения вашего самого старшего родственника? (напр. Январь 1900)">Какой месяц и год рождения вашего самого старшего родственника? (напр. Январь 1900)</option>
+                                            <option value="Какое отчество вашего среднего ребенка?">Какое отчество вашего среднего ребенка?</option>
+                                            <option value="Какое отчество вашего самого старого родственника?">Какое отчество вашего самого старого родственника?</option>
+                                            <option value="Какую школу вы посещали в шестом классе?">Какую школу вы посещали в шестом классе?</option>
+                                            <option value="Какой у вас в детстве был номер телефона? (напр. (495) 123-4567)">Какой у вас в детстве был номер телефона? (напр. (495) 123-4567)</option>
+                                            <option value="Какое имя и фамилия у вашего старшего двоюродного брата/сестры?">Какое имя и фамилия у вашего старшего двоюродного брата/сестры?</option>
+                                            <option value="Как звали вашу первую плюшевую игрушку?">Как звали вашу первую плюшевую игрушку?</option>
+                                            <option value="В каком месте встретились ваши родители?">В каком месте встретились ваши родители?</option>
+                                            <option value="Где вы в первый раз поцеловались?">Где вы в первый раз поцеловались?</option>
+                                            <option value="Как звали мальчика/девочку которого вы поцеловали?">Как звали мальчика/девочку которого вы поцеловали?</option>
+                                            <option value="Как звали вашего учителя в третьем классе?">Как звали вашего учителя в третьем классе?</option>
+                                            <option value="В каком городе живет ваш ближайший родственник?">В каком городе живет ваш ближайший родственник?</option>
+                                            <option value="Какой месяц и год рождения вашего старшего брата? (напр. Январь 1900)">Какой месяц и год рождения вашего старшего брата? (напр. Январь 1900)</option>
+                                            <option value="Какая девичья фамилия вашей бабушки?">Какая девичья фамилия вашей бабушки?</option>
+                                            <option value="В каком городе была ваша первая работа?">В каком городе была ваша первая работа?</option>
+                                            <option value="В каком месте была ваша свадебная церемония?">В каком месте была ваша свадебная церемония?</option>
+                                            <option value="Как называлось учебное заведение в которое вы поступили, но не стали учиться?">Как называлось учебное заведение в которое вы поступили, но не стали учиться?</option>
+                                            <option value="Где вы были когда услышали о трагедии девятого сентября?">Где вы были когда услышали о трагедии девятого сентября?</option>
+                                        </select>
+                                    </div>
+                                    <div><label class="label-style">Ответ на секретный вопрос</label>
+                                        <input type="text" name="answer"class="input-style pb1" required/>
                                     </div>
                                     <div>
                                         <label class="label-style">Фамилия</label>
-                                        <input type="text" name="surName" class="input-style pb1"/>
+                                        <input type="text" name="surName" class="input-style pb1" required/>
                                     </div>
                                     <div>
                                         <label class="label-style">Имя</label>
-                                        <input type="text" name="nameUser" class="input-style pb1"/>
+                                        <input type="text" name="nameUser" class="input-style pb1" required/>
                                     </div>
                                     <div>
                                         <label class="label-style">Отчество</label>
@@ -49,15 +80,15 @@
                                     </div>
                                     <div>
                                         <label class="label-style">Дата рождения</label>
-                                        <input type="date" name="birthday" class="input-style" />
+                                        <input type="date" name="birthday" class="input-style" required/>
                                     </div>
                                     <div>
                                         <label class="label-style">Номер телефона</label>
-                                        <input type="number" name="phone" class="input-style pb1"/>
+                                        <input type="number" name="phone" class="input-style pb1" required/>
                                     </div>
                                     <div>
                                         <label class="label-style">Почта</label>
-                                        <input type="text" name="email" class="input-style pb1"/>
+                                        <input type="email" name="email" class="input-style pb1" required/>
                                     </div>
                                     
                                     <button type="submit" class="button-signup" >Зарегистрироваться</button>

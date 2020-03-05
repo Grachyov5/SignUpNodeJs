@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сброс пароля</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <div id="app">
+        <div class="main-font main">
+            <div class="sub-main">
+                <main>
+                    <header>                        
+                        <a href="http://10.64.2.197:53270/ecplibjsf/" title="Перейти на сайт ИС - ЭЦБ">
+                            <h1>ИС - ЭЦБ</h1>
+                        </a>                                             
+                    </header>
+                    <div class="main-body">
+                        <section class="main-body-section">
+                            <div>
+                               <form id="forgot" action="/changePassword" method="POST" class="main-form-signup">
+                                <form id="forgot" class="main-form-signup">
+                                    <h2 class="signup-header">Сброс пароля</h2>
+                                    <p class="info-text">Для сброса пароля введите ответ на 
+                                        секретный вопрос, новый пароль и нажмите отправить.</p>
+                                    <div>
+                                        <label class="label-style">Логин</label>
+                                        <input type="text" name="j_username" class="input-style pb1" value="{{username}}" required />
+                                        <div>
+                                            <p class="secret-Question info-text"><span class="span-question">Секретный вопрос: </span> {{secretQuestion}}</p>
+                                        </div>
+                                        <div>
+                                            <label class="label-style">Ответ</label>
+                                            <input type="text" name="answer" class="input-style pb1" required />
+                                        </div>
+                                        <div>
+                                            <label class="label-style">Пароль</label>
+                                            <input type="password" name="j_password" class="input-style pb1" required minlength="4" />
+                                        </div>
+                                        {{!-- <div>
+                                            <label class="label-style">Подтвердите пароль</label>
+                                            <input type="password" name="confirm_password" class="input-style pb1" required minlength="4" />
+                                        </div> --}}
+                                        </div>
+                                    <button type="submit" class="button-signup" >Отправить</button>
+                                </form>                               
+                            </div>
+                        </section>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

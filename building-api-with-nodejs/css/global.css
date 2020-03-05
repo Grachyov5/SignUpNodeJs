@@ -25,3 +25,22 @@ a {
         width: 144px;
     }
 } */
+.info-text {
+    color: rgba(0,0,0,.8);
+    line-height: 1.5;
+}
+.secret-Question {       
+    padding-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;  
+    border-color: rgba(0,0,0,.1);
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-bottom-width: 1px;
+}
+.span-question {
+    font-weight: 600;
+}
